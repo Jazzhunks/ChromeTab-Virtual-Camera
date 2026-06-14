@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chrome Tab Virtual Camera</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="card">
+      <header class="header">
+        <div class="logo">
+          <div class="logo-icon"></div>
+          <span class="logo-text">TabCam <span class="badge-v">MV3</span></span>
+        </div>
+        <div class="status-indicator">
+          <span class="indicator-dot inactive" id="statusDot"></span>
+          <span class="status-label" id="statusLabel">Standby</span>
+        </div>
+      </header>
+
+      <section class="main-body">
+        <div class="active-tab-box" id="activeTabContainer">
+          <label class="section-label">Source Tab</label>
+          <div class="tab-title-display" id="tabTitle">Target Tab: Not selected</div>
+          <div class="sub-hint">Extension will stream the selected tab as a webcam.</div>
+        </div>
+
+        <div class="options-grid">
+          <div class="control-group">
+            <label for="resolutionSelect">Resolution</label>
+            <select id="resolutionSelect">
+              <option value="720">720p (HD)</option>
+              <option value="1080" selected>1080p (Full HD)</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="fpsSelect">Frame Rate</label>
+            <select id="fpsSelect">
+              <option value="30" selected>30 FPS</option>
+              <option value="60">60 FPS</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="toggles-list">
+          <div class="toggle-row">
+            <div class="toggle-info">
+              <span class="toggle-title">Capture Audio</span>
+              <span class="toggle-desc">Pipes tab sounds alongside video</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="audioToggle" />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="toggle-row">
+            <div class="toggle-info">
+              <span class="toggle-title">Mirror Stream Output</span>
+              <span class="toggle-desc">Reflects horizontal camera feed</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="mirrorToggle" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <button class="primary-btn" id="actionBtn">Start Virtual Camera</button>
+      </section>
+
+      <footer class="footer">
+        <div>Real-Time WebRTC Media pipeline</div>
+        <div>Created with ❤️ by Mudasir Mushtaq</div>
+      </footer>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
