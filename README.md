@@ -1,6 +1,4 @@
-========================================================================
-             CHROME TAB VIRTUAL CAMERA - EXTENSION INSTRUCTIONS
-========================================================================
+CHROME TAB VIRTUAL CAMERA - EXTENSION INSTRUCTIONS
 
 A plug-and-play Chrome Extension that allows you to capture any Chrome Tab 
 and expose it directly as a webcam-selectable video/audio stream in video 
